@@ -10,3 +10,5 @@ save favorite color schemes and restore them
 Master plan: have a folder full of my favorite wallpapers, and have one be
 randomly chosen at random. Then have this application generate a color scheme
 for each wallpaper and set them at login. 
+
+I plan to use external tools for the actual generation of the color schemes
