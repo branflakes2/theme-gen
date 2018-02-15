@@ -21,6 +21,8 @@ def checkFile(filename):
     else:
         raise FileFormatError("No ##colors## statement in output file")
 
+#saves a backup of the file, then replaces the colors block with the given 
+#colors
 def writeFile(filename, color_string):
     checkFile(filename)
     copyfile(filename, filename + ".bak")
@@ -61,7 +63,7 @@ def writeColorFile(filename, colors_dict):
     f.close()
 
 #I guess bogus keys could be written too, but they won't be used
-#File size will be checked too, so huge files can't be read
+#File size will be checked too (in final imp), so huge files can't be read
 def readColorFile(filename):
     color_dict = {}
     f = open(filename, 'r')

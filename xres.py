@@ -1,3 +1,5 @@
+#generates a .Xresources friendly string
+
 def genXresOut(colors):
     ret = ""
     ret += "*.background:\t{0!s}\n".format(colors['background'])

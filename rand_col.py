@@ -1,3 +1,7 @@
+#Converted from javascript taken from the terminal.sexy project
+#http://terminal.sexy
+#https://github.com/stayradiated/terminal.sexy/blob/master/lib/stores/random.js
+
 import os
 import struct as s
 from colour import Color

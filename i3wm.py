@@ -1,3 +1,5 @@
+#generates an i3 config friendly string
+
 def geni3Out(colors):
     ret = ""
     ret += "set $background\t{0!s}\n".format(colors['background'])
