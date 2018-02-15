@@ -2,6 +2,7 @@ from xres import genXresOut
 from i3wm import geni3Out
 from rand_col import generateRandomColors
 from subprocess import call
+from refresh_urxvt import refresh_urxvt
 import fileio
 
 def main():
@@ -11,4 +12,6 @@ def main():
     fileio.writeColorFile("color_out.th", colors)
     call(["xrdb", "/home/brian/.Xresources"])
     call(["i3-msg", "reload"])
+    refresh_urxvt()
+
 main()
