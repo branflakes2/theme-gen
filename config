@@ -1,1 +1,2 @@
-theme_save_dir: ~/themes
+theme_save_dir: /user/brian/.config/themes
+backups: 3

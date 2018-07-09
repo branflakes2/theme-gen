@@ -21,6 +21,17 @@ def checkFile(filename):
     else:
         raise FileFormatError("No ##colors## statement in output file")
 
+#checks the format of the color file
+def checkColorFile(filename):
+    return True
+    #f = open(filename)
+    #lines = f.readlines()
+    #f.close()
+    #for line in lines:
+    #    stripped = line.strip()
+    #    length = len(stripped)
+       
+
 #saves a backup of the file, then replaces the colors block with the given 
 #colors
 def writeFile(filename, color_string):
@@ -66,15 +77,18 @@ def writeColorFile(filename, colors_dict):
 #File size will be checked too (in final imp), so huge files can't be read
 def readColorFile(filename):
     color_dict = {}
-    f = open(filename, 'r')
-    lines = f.readlines()
-    f.close()
-    for line in lines:
-        if line.strip()[0] == '!' or len(line.strip()) == 0:
-            continue
-        split_line = line.split(':')
-        key = split_line[0].strip()
-        value = split_line[1].strip()
-        color_dict[key] = value
-    return color_dict
+    if checkColorFile(filename):
+        f = open(filename, 'r')
+        lines = f.readlines()
+        f.close()
+        for line in lines:
+            if line.strip()[0] == '!' or len(line.strip()) == 0:
+                continue
+            split_line = line.split(':')
+key = split_line[0].strip()
+            value = split_line[1].strip()
+            color_dict[key] = value
+        return color_dict
+    else:
+        return False
 

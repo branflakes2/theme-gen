@@ -1,5 +1,6 @@
-!If this is the randomly generated temp theme file, it probably shouldn't be
-!edited in place. Save it first, make your edits, then reload it.
+!If this is the randomly generated temp theme file, it will be overwritten
+!next time a new theme is edited. If you wish to customize it, save it, make
+!your edits, then reload.
 background:	#060604
 foreground:	#ecebdf
 color1:	#060604
