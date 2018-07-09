@@ -48,6 +48,13 @@ def ld_config():
 #returns true on successful load, false otherwise
 def load_theme(config, theme_file):
     colors = {}
+    if path.exists(config["theme_dir"] + "/.unsaved"):
+        i = input("Current theme is unsaved, generate anyway? (Y/n): ")
+        if not (i == "y" or i == "Y"):
+            print("Not generating new theme\n")
+            return
+    if path.exists(config["theme_dir"] + "/.unsaved"):
+        os.rmdir(config["theme_dir"] + "/.unsaved")
     theme_dir = config["theme_dir"]
     if path.isfile(theme_dir + "/" + theme_file + ".th"):
         colors = fileio.readColorFile(theme_dir + "/" + theme_file + ".th")
