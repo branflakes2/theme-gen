@@ -85,7 +85,7 @@ def readColorFile(filename):
             if line.strip()[0] == '!' or len(line.strip()) == 0:
                 continue
             split_line = line.split(':')
-key = split_line[0].strip()
+            key = split_line[0].strip()
             value = split_line[1].strip()
             color_dict[key] = value
         return color_dict
