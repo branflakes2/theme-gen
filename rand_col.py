@@ -32,7 +32,7 @@ def generateRandomColors():
     
     #8 low saturation shades
     for i in range(0, 8):
-        colors['color{0}'.format(str(i + 1))] = Color(hsl=(hues[0], baseSat, (baseLight + (rangeLight * pow(i/7, 1.5))))).get_hex_l()
+        colors['color{0}'.format(str(i))] = Color(hsl=(hues[0], baseSat, (baseLight + (rangeLight * pow(i/7, 1.5))))).get_hex_l()
 
     #8 random shades
     minSat = float(random(30, 70))/100
@@ -42,6 +42,6 @@ def generateRandomColors():
 
     for i in range(0, 8):
         a = random(minLight * 100, maxLight*100)/100
-        colors['color{0}'.format(str(i + 9))] = Color(hsl=(hues[random(0, 5)], random(minSat * 100, maxSat * 100)/100, a)).get_hex_l()
+        colors['color{0}'.format(str(i + 8))] = Color(hsl=(hues[random(0, 5)], random(minSat * 100, maxSat * 100)/100, a)).get_hex_l()
 
     return colors

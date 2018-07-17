@@ -106,6 +106,11 @@ def refresh(config):
     if config["urxvt"] == "true":
         refresh_urxvt()
 
+def ls(config):
+    onlyfiles = [f for f in os.listdir(config["theme_dir"]) if os.path.isfile(os.path.join(config["theme_dir"], f)) and ".th" in f]
+    for i in onlyfiles:
+        print(i.split(".")[0])
+
 def main():
     config = ld_config()
     if sys.argv[1] == "-load":
@@ -114,6 +119,8 @@ def main():
         gen_theme(config)             
     elif sys.argv[1] == "-save":
         save_theme(config, sys.argv[2])
+    elif sys.argv[1] == "-list":
+        ls(config)
     #case "-rename":
     #    print("Not Implemented")
     #case "-delete":
