@@ -74,7 +74,7 @@ def save_theme(config, theme_name):
     colors = fileio.readColorFile(config["ld_file"])
     if path.isfile(theme_dir + "/" + theme_name + ".th"):
         i = input("Color file exists, overwrite? (Y/n):") 
-        if(not (i == "y" or i == "Y")):
+        if i == "n" or i == "N":
             return
         else:
             print("Overwriting...")
@@ -86,7 +86,7 @@ def gen_theme(config):
     colors = generateRandomColors()
     if path.exists(config["theme_dir"] + "/.unsaved"):
         i = input("Current theme is unsaved, generate anyway? (Y/n): ")
-        if not (i == "y" or i == "Y"):
+        if i == "n" or i == "n":
             print("Not generating new theme\n")
             return
     else:
