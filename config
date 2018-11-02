@@ -1,0 +1,3 @@
+Xresources  :   ~/.Xresources
+i3config    :   ~/.config/i3/config
+urxvt       :   true   

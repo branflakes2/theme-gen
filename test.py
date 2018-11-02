@@ -113,13 +113,13 @@ def ls(config):
 
 def main():
     config = ld_config()
-    if sys.argv[1] == "-load":
+    if sys.argv[1] == "--load" or sys.argv[1] == "-l":
         load_theme(config, sys.argv[2])
-    elif sys.argv[1] ==  "-gen":
+    elif sys.argv[1] ==  "--gen" or sys.argv[1] == "-g":
         gen_theme(config)             
-    elif sys.argv[1] == "-save":
+    elif sys.argv[1] == "--save" or sys.argv[1] == "-s":
         save_theme(config, sys.argv[2])
-    elif sys.argv[1] == "-list":
+    elif sys.argv[1] == "--list" or sys.argv[1] == "-L":
         ls(config)
     #case "-rename":
     #    print("Not Implemented")
